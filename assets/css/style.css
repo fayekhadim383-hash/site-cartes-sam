@@ -323,12 +323,6 @@ a:hover {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
-.service-icon {
-    font-size: 3rem;
-    color: #3498db;
-    margin-bottom: 20px;
-}
-
 /* --- DEFILEMENT DES TEMOIGNAGES ---*/
 /* Styles généraux pour la section */
 .services-preview {
