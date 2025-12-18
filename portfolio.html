@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - CartesVisitePro</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo.png" alt="CartesVisitePro">
+                    <span>CartesVisitePro</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="client/login.php" class="btn-client">Espace Client</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Notre Portfolio</h1>
+            <p>Découvrez nos réalisations pour des entreprises de tous secteurs</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Filters -->
+    <section class="portfolio-filters">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="standard">Standard</button>
+                <button class="filter-btn" data-filter="nfc">NFC</button>
+                <button class="filter-btn" data-filter="premium">Premium</button>
+                <button class="filter-btn" data-filter="entreprise">Entreprises</button>
+                <button class="filter-btn" data-filter="freelance">Freelance</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="portfolio-grid">
+        <div class="container">
+            <div class="portfolio-items">
+                <!-- Item 1 -->
+                <div class="portfolio-item" data-category="nfc entreprise">
+                    <div class="portfolio-image">
+                        <img src="assets/images/portfolio/tech-company.jpg" alt="Tech Company NFC">
+                        <div class="portfolio-overlay">
+                            <h3>Tech Solutions SARL</h3>
+                            <p>Carte NFC avec application mobile</p>
+                            <a href="#" class="view-btn">Voir détails</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Tech Solutions SARL</h3>
+                        <p>Secteur : Technologie</p>
+                        <span class="portfolio-tag nfc">NFC</span>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="portfolio-item" data-category="premium entreprise">
+                    <div class="portfolio-image">
+                        <img src="assets/images/portfolio/law-firm.jpg" alt="Cabinet d'avocats">
+                        <div class="portfolio-overlay">
+                            <h3>Cabinet Legal & Partners</h3>
+                            <p>Carte premium avec dorure à chaud</p>
+                            <a href="#" class="view-btn">Voir détails</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Cabinet Legal & Partners</h3>
+                        <p>Secteur : Droit</p>
+                        <span class="portfolio-tag premium">Premium</span>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="portfolio-item" data-category="standard freelance">
+                    <div class="portfolio-image">
+                        <img src="assets/images/portfolio/designer.jpg" alt="Designer freelance">
+                        <div class="portfolio-overlay">
+                            <h3>Sarah Design</h3>
+                            <p>Carte standard design minimaliste</p>
+                            <a href="#" class="view-btn">Voir détails</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Sarah Design</h3>
+                        <p>Secteur : Design graphique</p>
+                        <span class="portfolio-tag standard">Standard</span>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="portfolio-item" data-category="nfc entreprise">
+                    <div class="portfolio-image">
+                        <img src="assets/images/portfolio/restaurant.jpg" alt="Restaurant gastronomique">
+                        <div class="portfolio-overlay">
+                            <h3>Le Bistrot Parisien</h3>
+                            <p>Carte NFC avec menu numérique</p>
+                            <a href="#" class="view-btn">Voir détails</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Le Bistrot Parisien</h3>
+                        <p>Secteur : Restauration</p>
+                        <span class="portfolio-tag nfc">NFC</span>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="portfolio-item" data-category="premium entreprise">
+                    <div class="portfolio-image">
+                        <img src="assets/images/portfolio/consulting.jpg" alt="Cabinet de consulting">
+                        <div class="portfolio-overlay">
+                            <h3>Global Consulting Group</h3>
+                            <p>Carte premium avec gaufrage</p>
+                            <a href="#" class="view-btn">Voir détails</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Global Consulting Group</h3>
+                        <p>Secteur : Conseil</p>
+                        <span class="portfolio-tag premium">Premium</span>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="portfolio-item" data-category="standard freelance">
+                    <div class="portfolio-image">
+                        <img src="assets/images/portfolio/photographer.jpg" alt="Photographe">
+                        <div class="portfolio-overlay">
+                            <h3>Martin Photography</h3>
+                            <p>Carte standard avec photo profil</p>
+                            <a href="#" class="view-btn">Voir détails</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Martin Photography</h3>
+                        <p>Secteur : Photographie</p>
+                        <span class="portfolio-tag standard">Standard</span>
+                    </div>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="portfolio-item" data-category="nfc entreprise">
+                    <div class="portfolio-image">
+                        <img src="assets/images/portfolio/real-estate.jpg" alt="Agence immobilière">
+                        <div class="portfolio-overlay">
+                            <h3>Sunset Real Estate</h3>
+                            <p>Carte NFC avec visites virtuelles</p>
+                            <a href="#" class="view-btn">Voir détails</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Sunset Real Estate</h3>
+                        <p>Secteur : Immobilier</p>
+                        <span class="portfolio-tag nfc">NFC</span>
+                    </div>
+                </div>
+
+                <!-- Item 8 -->
+                <div class="portfolio-item" data-category="premium entreprise">
+                    <div class="portfolio-image">
+                        <img src="assets/images/portfolio/luxury.jpg" alt="Marque de luxe">
+                        <div class="portfolio-overlay">
+                            <h3>Élégance Paris</h3>
+                            <p>Carte premium vernis sélectif</p>
+                            <a href="#" class="view-btn">Voir détails</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Élégance Paris</h3>
+                        <p>Secteur : Luxe</p>
+                        <span class="portfolio-tag premium">Premium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Témoignages clients</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Les cartes NFC ont transformé notre façon de réseauter. Nos clients adorent la facilité d'ajout des contacts !"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="assets/images/clients/client1.jpg" alt="Client 1">
+                        <div>
+                            <h4>Thomas Laurent</h4>
+                            <p>Directeur, Tech Solutions SARL</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"La qualité des cartes premium est exceptionnelle. Elles reflètent parfaitement le prestige de notre cabinet."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="assets/images/clients/client2.jpg" alt="Client 2">
+                        <div>
+                            <h4>Marie Dubois</h4>
+                            <p>Avocate, Legal & Partners</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Service client excellent et délais respectés. Mes nouvelles cartes ont fait forte impression auprès de mes clients."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="assets/images/clients/client3.jpg" alt="Client 3">
+                        <div>
+                            <h4>Sarah Chen</h4>
+                            <p>Designer Freelance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="statistics">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat">
+                    <h3>500+</h3>
+                    <p>Clients satisfaits</p>
+                </div>
+                <div class="stat">
+                    <h3>10,000+</h3>
+                    <p>Cartes produites</p>
+                </div>
+                <div class="stat">
+                    <h3>98%</h3>
+                    <p>Satisfaction client</p>
+                </div>
+                <div class="stat">
+                    <h3>24h</h3>
+                    <p>Support réactif</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>CartesVisitePro</h3>
+                    <p>Votre partenaire pour des cartes de visite innovantes et professionnelles.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#standard">Cartes Standard</a></li>
+                        <li><a href="services.html#nfc">Cartes NFC</a></li>
+                        <li><a href="services.html#premium">Cartes Premium</a></li>
+                        <li><a href="client/demo.php">Démonstration</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> VDN, en face cimetière de Saint Lazard</li>
+                        <li><i class="fas fa-phone"></i> +221 33 863 11 46</li>
+                        <li><i class="fas fa-envelope"></i> contact@cartesvisitepro.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CartesVisiteProSamCorporate. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/portfolio.js"></script>
+</body>
+</html>

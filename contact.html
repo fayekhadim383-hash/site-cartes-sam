@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - CartesVisitePro</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo.png" alt="CartesVisitePro">
+                    <span>CartesVisitePro</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="client/login.php" class="btn-client">Espace Client</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contactez-nous</h1>
+            <p>Nous sommes là pour répondre à toutes vos questions</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Informations de contact</h2>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Adresse</h3>
+                            <p>VDN, en face cimetière de Saint Lazard, Dakar, Sénégal</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Téléphone</h3>
+                            <p>+221 33 863 11 46</p>
+                            <p>Lun-Ven: 9h-18h</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>contact@cartesvisitepro.com</p>
+                            <p>support@cartesvisitepro.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Horaires d'ouverture</h3>
+                            <p>Lundi - Vendredi: 9h00 - 18h00</p>
+                            <p>Samedi: 10h00 - 14h00</p>
+                            <p>Dimanche: Fermé</p>
+                        </div>
+                    </div>
+                    <div class="social-contact">
+                        <h3>Suivez-nous</h3>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h2>Envoyez-nous un message</h2>
+                    <form id="contactForm" action="includes/contact-process.php" method="POST">
+                        <div class="form-group">
+                            <label for="name">Nom complet *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Entreprise</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Sujet *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Sélectionnez un sujet</option>
+                                <option value="devis">Demande de devis</option>
+                                <option value="information">Demande d'information</option>
+                                <option value="support">Support technique</option>
+                                <option value="partenariat">Proposition de partenariat</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <label for="newsletter">Je souhaite recevoir la newsletter</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Questions fréquentes</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> Quel est le délai de production ?</h3>
+                    <p>Les délais varient selon le type de carte : 5 jours pour les cartes standard, 7 jours pour les premium et 10 jours pour les cartes NFC.</p>
+                </div>
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> Puis-je modifier mes cartes après commande ?</h3>
+                    <p>Oui, pour les cartes NFC, vous pouvez modifier les informations à tout moment via votre espace client. Pour les autres cartes, les modifications sont possibles avant la production.</p>
+                </div>
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> Comment fonctionnent les cartes NFC ?</h3>
+                    <p>Les cartes NFC contiennent une puce qui peut être lue par les smartphones compatibles. En approchant la carte du téléphone, vos informations de contact sont automatiquement partagées.</p>
+                </div>
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> Proposez-vous des échantillons ?</h3>
+                    <p>Oui, nous pouvons vous envoyer un kit d'échantillons contenant nos différents types de cartes. Contactez-nous pour en faire la demande.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Nous trouver</h2>
+            <div class="map-placeholder">
+                <div class="map-info">
+                    <h3>Notre bureau</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> VDN, en face cimetière de Saint Lazard, Dakar, Sénégal</p>
+                    <p><i class="fas fa-subway"></i> Bus DemDik: Opéra (lignes 3, 7, 8)</p>
+                    <p><i class="fas fa-bus"></i> Bus Tata: 21, 27, 29, 95</p>
+                    <p><i class="fas fa-parking"></i> Parking public à proximité</p>
+                </div>
+                <div class="map-image">
+                    <!-- En production, remplacer par une vraie carte Google Maps -->
+                     <iframe width="500" height="420" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="www.openstreetmap.org" style="border: 1px solid black"></iframe>
+                    <!-- <img src="assets/images/map-placeholder.jpg" alt="Carte localisation"> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2>Prêt à commencer votre projet ?</h2>
+            <p>Contactez-nous dès aujourd'hui pour discuter de vos besoins en cartes de visite professionnelles.</p>
+            <div class="cta-buttons">
+                <a href="tel:+221338631146" class="btn btn-primary"><i class="fas fa-phone"></i> Nous appeler</a>
+                <a href="mailto:contact@cartesvisitepro.com" class="btn btn-secondary"><i class="fas fa-envelope"></i> Envoyer un email</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>CartesVisitePro</h3>
+                    <p>Votre partenaire pour des cartes de visite innovantes et professionnelles.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#standard">Cartes Standard</a></li>
+                        <li><a href="services.html#nfc">Cartes NFC</a></li>
+                        <li><a href="services.html#premium">Cartes Premium</a></li>
+                        <li><a href="client/demo.php">Démonstration</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> VDN, en face cimetière de Saint Lazard</li>
+                        <li><i class="fas fa-phone"></i> +221 33 863 11 46</li>
+                        <li><i class="fas fa-envelope"></i> contact@cartesvisitepro.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CartesVisiteProSamCorporate. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/form-validation.js"></script>
+</body>
+</html>

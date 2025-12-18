@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - CartesVisitePro</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo.png" alt="CartesVisitePro">
+                    <span>CartesVisitePro</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="client/login.php" class="btn-client">Espace Client</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" width="200px">
+        <div class="container" width="200px">
+            <div class="hero-content">
+                <h1>Cartes de Visite Professionnelles & NFC</h1>
+                <p>Créez des cartes de visite innovantes qui laissent une impression durable. Standard, NFC ou premium, nous avons la solution parfaite pour votre entreprise.</p>
+                <div class="hero-buttons">
+                    <a href="services.html" class="btn btn-primary">Découvrir nos services</a>
+                    <a href="client/register.php" class="btn btn-secondary">Créer un compte</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/carte_de_visite1.png" alt="Carte de visite 1">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="services-details-index" id="standard">
+        <div class="container">
+            <h2 class="section-title">Nos Cartes</h2>
+            <div class="service-detail">
+                <div class="service-info">
+                    <h3><i class="fas fa-qrcode"></i> Cartes avec QR Code</h3>
+                    <p>Nos cartes de visite standard offrent une solution professionnelle et économique pour votre entreprise. Imprimées avec soin sur du papier premium, elles transmettent une image sérieuse et soignée.</p>
+                    <h3>Caractéristiques :</h3>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Impression recto haute qualité</li>
+                        <li><i class="fas fa-check"></i> Papier 300g/m² mat ou brillant</li>
+                        <li><i class="fas fa-check"></i> Coins arrondis ou droits au choix</li>
+                        <li><i class="fas fa-check"></i> Livraison en 5 jours ouvrés</li>
+                        <li><i class="fas fa-check"></i> Quantité : 100 à 1000 unités</li>
+                    </ul>
+                    <a href="services.html#standard" class="btn-link">En savoir plus →</a>
+                </div>
+                <div class="service-image">
+                    <img src="assets/images/qr_code.jpg" alt="Carte QR Code">
+                    <img src="assets/images/carte_de_visite1.png" alt="Carte QR Code">
+                    <img src="assets/images/carte_de_visite2.png" alt="Carte QR Code">
+                    <img src="assets/images/carte_de_visite3.png" alt="Carte QR Code">
+                </div>
+            </div>
+
+            <div class="service-detail reverse" id="nfc">
+                <div class="service-info">
+                    <h3><i class="fas fa-wifi"></i> Cartes NFC</h3>
+                    <p>La technologie NFC révolutionne les cartes de visite ! Partagez instantanément vos informations numériquement avec un simple tapotement sur un smartphone.</p>
+                    <h3>Caractéristiques :</h3>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Puce NFC intégrée</li>
+                        <li><i class="fas fa-check"></i> Application mobile incluse</li>
+                        <li><i class="fas fa-check"></i> Mises à jour en temps réel</li>
+                        <li><i class="fas fa-check"></i> Suivi des interactions</li>
+                        <li><i class="fas fa-check"></i> Personnalisation avancée</li>
+                        <li><i class="fas fa-check"></i> Livraison en 10 jours ouvrés</li>
+                    </ul>
+                    <h3>Fonctionnalités NFC :</h3>
+                    <div class="nfc-features">
+                        <span><i class="fas fa-link"></i> Lien vers site web</span>
+                        <span><i class="fas fa-phone"></i> Appel direct</span>
+                        <span><i class="fas fa-envelope"></i> Email pré-rempli</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Localisation</span>
+                        <span><i class="fas fa-vcard"></i> Contact vCard</span>
+                        <span><i class="fas fa-wifi"></i> Connexion Wi-Fi</span>
+                    </div>
+                    <a href="services.html#standard" class="btn-link">En savoir plus →</a>
+                </div>
+                <div class="service-image">
+                    <img src="assets/images/nfc.jpg" alt="Carte NFC">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section comment ça marchent -->
+    <section class="services-preview">
+        <div class="container">
+            <h2 class="section-title">Comment ça marchent</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h3>Cartes avec QR Code</h3>
+                    <p>Les cartes QR code fonctionnent en encodant des informations (lien web, données de paiement, contact) dans un motif carré noir et blanc, scannable par l'appareil photo d'un smartphone, qui redirige ensuite l'utilisateur vers le contenu numérique associé (menu, page de paiement sécurisée, profil social, etc.) une fois le code décodé, permettant une action rapide et sans saisie manuelle. C'est une passerelle numérique simple et rapide entre le monde physique (la carte) et le digital.</p>
+                    <a href="services.html#standard" class="btn-link">En savoir plus →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>Cartes NFC</h3>
+                    <p>Les cartes NFC fonctionnent grâce à une puce et une antenne qui échangent des données sans contact via des ondes radio à très courte portée (moins de 10 cm) avec un appareil actif (comme un smartphone ou un terminal de paiement) qui leur fournit l'énergie nécessaire, permettant des paiements sans contact, des transferts d'informations (coordonnées, liens) ou des accès sécurisés, le tout instantanément et automatiquement.</p>
+                    <a href="services.html#nfc" class="btn-link">En savoir plus →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Pourquoi choisir nos Cartes Biométriques et NFC ?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <i class="fas fa-sync-alt"></i>
+                    <h3>Mises à jour en ligne</h3>
+                    <p>Modifiez vos cartes NFC à tout moment via votre espace client.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Personnalisation totale</h3>
+                    <p>Designz vos cartes selon votre identité visuelle.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Livraison rapide</h3>
+                    <p>Production et livraison express pour vos commandes urgentes.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-headset"></i>
+                    <h3>Support dédié</h3>
+                    <p>Notre équipe vous accompagne dans votre projet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECTION PARTENARIATS-->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Ceux qui nous font confiance</h2>
+            <div class="features-grid-partenariat scroll-container">
+                <div class="feature-partenariat scroll-content">
+                    <p><img src="assets/images/logo_orange.jpg" height="80px" width="150px"></p>
+                </div>
+                <div class="feature-partenariat scroll-content">
+                    <p><img src="assets/images/logo-kaayjob.jpg" height="80px" width="150px"></p>
+                </div>
+                <div class="feature-partenariat scroll-content">
+                    <p><img src="assets/images/logo-akm.png" height="80px" width="150px"></p>
+                </div>
+                <div class="feature-partenariat scroll-content">
+                    <p><img src="assets/images/logo-eden.jpg" height="80px" width="150px"></p>
+                </div>
+                <div class="feature-partenariat scroll-content">
+                    <p><img src="assets/images/logo_cfic.jpg" height="80px" width="150px"></p>
+                </div>
+                <div class="feature-partenariat scroll-content">
+                    <p><img src="assets/images/logo-helixsen.jpg" height="80px" width="150px"></p>
+                </div>
+                <div class="feature-partenariat scroll-content">
+                    <p><img src="assets/images/logo-pnud.jpg" height="80px" width="150px"></p>
+                </div>
+                <div class="feature-partenariat scroll-content">
+                    <p><img src="assets/images/logo-mastercardfoundation.png" height="80px" width="150px"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-preview">
+        <div class="container">
+            <h2 class="section-title">Témoignages de nos cients</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <h3>Aissatou DIANE</h3> <h5>Directrice commerciale SONATEL</h5>
+                    <p>Je suis absolument ravie pour le professionnalise. Des cartes NFC de haut niveau nous ont été délivrés par SAM CORPORATE dans un délai de record.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <h3>Ousmane NDIAYE</h3> <h5>Responsable Logistique MasterCard Foundation</h5>
+                    <p>Je suis fier de travailler avec SAM CORPORATE. Une équipe vraiement professionnelle avec un dynamisme impressionnant</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <h3>Ousmane NDIAYE</h3> <h5>Responsable Logistique MasterCard Foundation</h5>
+                    <p>Je suis fier de travailler avec SAM CORPORATE. Une équipe vraiement professionnelle avec un dynamisme impressionnant</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>CartesVisitePro</h3>
+                    <p>Votre partenaire pour des cartes de visite innovantes et professionnelles.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#standard">Cartes Standard</a></li>
+                        <li><a href="services.html#nfc">Cartes NFC</a></li>
+                        <li><a href="services.html#premium">Cartes Premium</a></li>
+                        <li><a href="client/demo.php">Démonstration</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> VDN, en face cimetière de Saint Lazard</li>
+                        <li><i class="fas fa-phone"></i> +221 33 863 11 46</li>
+                        <li><i class="fas fa-envelope"></i> contact@cartesvisitepro.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CartesVisiteProSamCorporate. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
