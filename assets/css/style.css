@@ -13,7 +13,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f8f9fa;
+    background-color: #000000;
 }
 
 .container {
@@ -88,27 +88,28 @@ a:hover {
 }
 
 .btn-primary {
-    background-color: #3498db;
+    background-color: #006400;
     color: white;
 }
 
 .btn-primary:hover {
-    background-color: #2980b9;
-    color: white;
+    background-color: #FFFFFF;
+    color: #006400;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
 }
 
 .btn-secondary {
-    background-color: #2c3e50;
+    background-color: #006400;
     color: white;
 }
 
 .btn-secondary:hover {
-    background-color: #1a252f;
-    color: white;
+    background-color: #FFFFFF;
+    color: #006400;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(44, 62, 80, 0.3);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+    /*box-shadow: 0 5px 15px rgba(44, 62, 80, 0.3);*/
 }
 
 .btn-outline {
@@ -221,7 +222,7 @@ a:hover {
 .hero {
     padding: 80px 0;
     background: linear-gradient(135deg, #000000 0%, #000000 100%);
-    color: white;
+    /*color: #006400;*/
 }
 
 .hero .container {
@@ -233,7 +234,7 @@ a:hover {
 }
 
 .hero h1 {
-    color:#070707;
+    color: #006400;
     font-size: 3rem;
     margin-bottom: 20px;
 }
@@ -242,12 +243,14 @@ a:hover {
     font-size: 1.2rem;
     margin-bottom: 30px;
     opacity: 0.9;
+    color: #FFFFFF ;
 }
 
 .hero-buttons {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
+    color: #FFFFFF ;
 }
 
 .hero-image{
@@ -262,7 +265,7 @@ a:hover {
 /* === SERVICES PREVIEW - NOS CARTES === */
 .services-preview-card {
     padding: 60px 0;
-    background-color: #0a0909;
+    background-color: #000000;
 }
 
 .services-details-index{
@@ -277,19 +280,20 @@ a:hover {
 }
 
 .service-card-card {
-    background: #f8f9fa;
+    background: #1c1c1d;
     padding: 30px;
     border-radius: 10px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #FFFFFF;
 }
 
 .service-card-card h3{
-    color: #0eeb20;
+    color: #006400;
 }
 
 .service-card-card a{
-    color: #0eeb20;
+    color: #006400;
 }
 
 .service-card-car:hover {
@@ -311,11 +315,16 @@ a:hover {
 
 .services-details-index{
     padding: 80px 0;
-    background-color: white;
+    background-color: #000000;
 }
 
 .services-details-index h2{
-    color: #070707;
+    color: #006400;
+}
+
+
+.services-details-index .container{
+    background-color: #000000;
 }
 
 .services-grid {
@@ -490,12 +499,28 @@ a:hover {
 
 /* ===== FEATURES ===== */
 .features {
-    padding: 80px 0;
-    background-color: #f8f9fa;
+    padding: 60px 0;
+    background-color: #000000;
+}
+
+.features .container{
+    text-align: center;
+    padding: 40px;
+    background: #000000;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.feature{
+    background: #1c1c1d;
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #FFFFFF;
 }
 
 .features .container h2,h3,i{
-color: #0eeb20;
+color: #006400;
 }
 
 .features-grid {
@@ -504,17 +529,9 @@ color: #0eeb20;
     gap: 30px;
 }
 
-.feature {
-    text-align: center;
-    padding: 30px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-}
-
 .feature i {
     font-size: 2.5rem;
-    color: #3498db;
+    color: #006400;
     margin-bottom: 20px;
 }
 
