@@ -71,7 +71,7 @@ a:hover {
     transform: translateX(-50%);
     width: 60px;
     height: 3px;
-    background:#0eeb20
+    background:#006400;
 }
 
 /* ===== BUTTONS ===== */
@@ -310,7 +310,7 @@ a:hover {
 /* ===== TEMOIGNAGES ===== */
 .services-preview {
     padding: 80px 0;
-    background-color: white;
+    background-color: #000000;
 }
 
 .services-details-index{
@@ -334,11 +334,19 @@ a:hover {
 }
 
 .service-card {
-    background: #f8f9fa;
+    background: #1c1c1d;
     padding: 30px;
     border-radius: 10px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-preview h2{
+    color: #006400;
+}
+
+.services-preview h3{
+    color: #006400;
 }
 
 .service-card:hover {
@@ -346,11 +354,12 @@ a:hover {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
+
 /* --- DEFILEMENT DES TEMOIGNAGES ---*/
 /* Styles généraux pour la section */
 .services-preview {
     padding: 60px 0;
-    background: #f8f9fa;
+    background: #000000;
     overflow: hidden;
     position: relative;
 }
@@ -365,7 +374,7 @@ a:hover {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 50px;
-    color: #0eeb20;
+    color: #000000;
 }
 
 /* Conteneur principal avec défilement infini */
@@ -390,11 +399,12 @@ a:hover {
 /* Styles des cartes de témoignages */
 .service-card {
     flex: 0 0 350px;
-    background: white;
+    background: #1c1c1d;
     border-radius: 15px;
     padding: 30px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    color: #FFFFFF;
 }
 
 .service-card:hover {
@@ -415,24 +425,24 @@ a:hover {
 
 .service-card i {
     font-size: 30px;
-    color:#0eeb20;
+    color: #006400;
 }
 
 .service-card h3 {
     font-size: 1.5rem;
-    color: #333;
+    color: #006400;
     margin-bottom: 5px;
 }
 
 .service-card h5 {
     font-size: 1rem;
-    color:#0eeb20;
+    color: #006400;
     margin-bottom: 20px;
     font-weight: 500;
 }
 
 .service-card p {
-    color: #666;
+    color: #FFFFFF;
     line-height: 1.6;
     font-size: 1rem;
 }
@@ -449,7 +459,7 @@ a:hover {
     pointer-events: none;
 }
 
-.services-preview::before {
+/*.services-preview::before {
     left: 0;
     background: linear-gradient(to right, #f8f9fa, transparent);
 }
@@ -457,7 +467,7 @@ a:hover {
 .services-preview::after {
     right: 0;
     background: linear-gradient(to left, #f8f9fa, transparent);
-}
+}*/
 
 /* Pause au survol */
 .services-grid:hover {
@@ -538,11 +548,12 @@ color: #006400;
 /* ===== CEUX QUI NOUS FONT CONFIANCE ===== */
 .features {
     padding: 80px 0;
-    background-color: #f8f9fa;
+    background-color: #000000;
 }
 
 .partenaires{
-    background: linear-gradient(135deg, hsl(0, 0%, 2%) 0%, #070707 100%);
+    background:#000000;
+    padding: 80px 0;
 }
 
 .features-grid-partenariat {
@@ -933,11 +944,11 @@ color: #006400;
 }
 
 .service-info a{
-    color: #0eeb20;
+    color: #006400;
 }
 
-.service-info h2{
-    color: #0eeb20;
+.service-info h3{
+    color: #006400;
 }
 
 .service-detail.reverse .service-info {
@@ -951,13 +962,9 @@ color: #006400;
     margin-bottom: 10px;
 }
 
-.service-info h3{
-    color: #0eeb20;
-}
-
 .price {
     font-size: 1.5rem;
-    color: #2ecc71;
+    color: #006400;
     margin-bottom: 20px;
 }
 
