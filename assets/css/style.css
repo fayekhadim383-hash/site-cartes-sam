@@ -220,7 +220,7 @@ a:hover {
 /* ===== HERO SECTION ===== */
 .hero {
     padding: 80px 0;
-    background: linear-gradient(135deg, hsl(149, 85%, 33%) 0%, #3ae90e 100%);
+    background: linear-gradient(135deg, #000000 0%, #000000 100%);
     color: white;
 }
 
@@ -229,6 +229,7 @@ a:hover {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     align-items: center;
+    background: linear-gradient(135deg, #000000 0%, #000000 100%);
 }
 
 .hero h1 {
@@ -266,7 +267,7 @@ a:hover {
 
 .services-details-index{
     padding: 80px 0;
-    background-color: white;
+    background-color: #000000;
 }
 
 .services-grid-card {
@@ -663,10 +664,10 @@ color: #0eeb20;
     }
 }
 
-/* Pour les navigateurs WebKit (smooth scroll) */
+/* Pour les navigateurs WebKit (smooth scroll) 
 .features-grid-partenariat {
     -webkit-animation: scroll-horizontal 40s linear infinite;
-}
+}*/
 
 /* Pause l'animation quand l'utilisateur réduit les animations */
 @media (prefers-reduced-motion: reduce) {
