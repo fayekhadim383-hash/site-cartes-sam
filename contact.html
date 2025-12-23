@@ -173,10 +173,21 @@
                     <p><i class="fas fa-bus"></i> Bus Tata: 21, 27, 29, 95</p>
                     <p><i class="fas fa-parking"></i> Parking public à proximité</p>
                 </div>
-                <div class="map-image">
-                    <!-- En production, remplacer par une vraie carte Google Maps -->
-                     <iframe width="500" height="420" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="www.openstreetmap.org" style="border: 1px solid black"></iframe>
-                    <!-- <img src="assets/images/map-placeholder.jpg" alt="Carte localisation"> -->
+                <div class="mapouter"><div class="osm_canvas">
+                    <iframe width="600" height="400" id="osm_canvas"  src="about:blank" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    <script>
+                        document.getElementById('osm_canvas').contentDocument.write('<link rel = "stylesheet" href = "https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.min.css" />');
+                        document.getElementById('osm_canvas').contentDocument.write('<script src = "https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.min.js"><\/script>');
+                        document.getElementById('osm_canvas').contentDocument.write('<div id ="osm-map" style = "width:600px; height:400px;"></div>');
+                        document.getElementById('osm_canvas').contentDocument.write('<script>var mapOptions={center:[14.6934250, -17.4479380],zoom:15,attributionControl: true}; var map = new L.map("osm-map", mapOptions); map.attributionControl.setPrefix(\'&copy; <a target="_blank" href="https://www.openstreetmap.org/copyright" rel="nofollow noopener noreferrer">OpenStreetMap</a>\'); var layer = new L.TileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png");map.addLayer(layer);let marker = new L.Marker([14.6934250, -17.4479380]);marker.addTo(map).bindPopup(\'\'); marker.on(\'mouseover\',function(ev) {marker.openPopup();});<\/script>');
+                        document.getElementById('osm_canvas').contentDocument.close();
+                    </script>
+                    <a href="https://online.stopwatch-timer.net/">classroom timer</a><br>
+                    <a href="https://textcaseconvert.com/"></a><br>
+                    <style>.mapouter{position: relative;text-align: right;height: 400px;width: 600px;}</style>
+                    <a href="https://www.mapembed.net/openstreetmap">openstreetmap on website</a>
+                    <style>.osm_canvas{overflow: hidden;background: none !important;height: 400px;width: 600px;}
+                    </style>
                 </div>
             </div>
         </div>
@@ -196,6 +207,7 @@
 
     <footer class="footer">
         <div class="container">
+            <div class="footer-top"></div>
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>CartesVisitePro</h3>
