@@ -290,11 +290,42 @@ a:hover {
     color: #FFFFFF;
 }
 
+.service-card-card:hover {
+    transform: translateY(-10px);
+    background: #FFFFFF;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #006400;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #000000;
+}
+
+.services-details-index .container{
+    background-color: #000000;
+}
+
+.services-details-index h2{
+    color: #006400;
+}
+
 .service-card-card h3{
     color: #006400;
 }
 
+.service-card-card h3:hover, h2:hover{
+    color: #000000;
+}
+
+.service-card-card a:hover{
+    color: #000000;
+}
+
 .service-card-card a{
+    color: #006400;
+}
+
+.services-preview-card h2{
     color: #006400;
 }
 
@@ -525,17 +556,32 @@ a:hover {
 }
 
 .feature{
+    transform: translateY(-10px);
     background: #000000;
-    padding: auto;
     border-radius: 10px;
     border: 1px solid #006400;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     color: #FFFFFF;
-    padding: 5px;
+    padding: 10px;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    background: #FFFFFF;
+    border-radius: 10px;
+    border: 1px solid #006400;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #000000;
+    padding: 10px;
 }
 
 .features .container h2,h3,i{
 color: #006400;
+}
+
+.features .container h2:hover,h3:hover,i:hover{
+    color: #000000;
 }
 
 .features-grid {
@@ -1006,7 +1052,7 @@ color: #006400;
 }
 
 .service-info a{
-    color: #FFFFFF;
+    color: #006400;
 }
 
 .service-info h3,h2{
@@ -1023,6 +1069,26 @@ color: #006400;
     align-items: center;
     gap: 10px;
     margin-bottom: 10px;
+}
+
+.service-info:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    background: #FFFFFF;
+    padding: 30px; 
+    border-radius: 10px;
+    border: 1px solid #006400;
+    text-align: center;
+    color: #000000;
+}
+
+.service-info a:hover{
+    color: #000000;
+}
+
+.service-info h3:hover,h2:hover{
+    color: #000000;
+    align-items: center;
 }
 
 .price {
