@@ -581,3 +581,4 @@ document.querySelector('.hero-image').addEventListener('mouseleave', () => {
         plusSlides(1);
     }, 5000);
 });
+

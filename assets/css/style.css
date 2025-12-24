@@ -265,12 +265,12 @@ a:hover {
 
 /* === SERVICES PREVIEW - NOS CARTES === */
 .services-preview-card {
-    padding: 60px 0;
+    padding: 10px 0;
     background-color: #000000;
 }
 
 .services-details-index{
-    padding: 80px 0;
+    padding: 10px 0;
     background-color: #000000;
 }
 
@@ -313,7 +313,7 @@ a:hover {
     color: #006400;
 }
 
-.service-card-card h3:hover, h2:hover{
+.service-card-card h3:hover, .service-card-card h2:hover, .service-card-card i:hover{
     color: #000000;
 }
 
@@ -329,7 +329,7 @@ a:hover {
     color: #006400;
 }
 
-.service-card-car:hover {
+.service-card-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
@@ -342,8 +342,12 @@ a:hover {
 
 /* ===== TEMOIGNAGES ===== */
 .services-preview {
-    padding: 80px 0;
+    padding: 10px 0;
     background-color: #000000;
+}
+
+.services-preview h2:hover{
+    color: #006400;
 }
 
 .services-details-index{
@@ -366,7 +370,15 @@ a:hover {
     gap: 30px;
 }
 
+.services-grid:hover {
+    background: #000000;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
 .service-card {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     background: #000000;
     padding: 30px;
     border-radius: 10px;
@@ -386,7 +398,27 @@ a:hover {
 .service-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    background: #FFFFFF;
+    padding: 30px; 
+    border-radius: 10px;
+    border: 1px solid #006400;
+    text-align: center;
+    color: #000000;
 }
+
+.service-card a:hover{
+    color: #000000;
+}
+
+.service-card p:hover{
+    color: #000000;
+}
+
+.service-card h3:hover{
+    color: #000000;
+    align-items: center;
+}
+
 
 
 /* --- DEFILEMENT DES TEMOIGNAGES ---*/
@@ -543,13 +575,12 @@ a:hover {
 
 /* ===== FEATURES ===== */
 .features {
-    
+    padding: 10px 0;
     background-color: #000000;
 }
 
 .features .container{
     text-align: center;
-    padding: 80px 0;
     background: #000000;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -580,7 +611,7 @@ a:hover {
 color: #006400;
 }
 
-.features .container h2:hover,h3:hover,i:hover{
+.features .container h3:hover, .features .container i:hover{
     color: #000000;
 }
 
@@ -916,6 +947,26 @@ color: #006400;
     direction: ltr;
 }
 
+.about-text:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    background: #FFFFFF;
+    padding: 30px; 
+    border-radius: 10px;
+    border: 1px solid #006400;
+    text-align: center;
+    color: #000000;
+}
+
+.about-text a:hover{
+    color: #000000;
+}
+
+.about-text h3:hover{
+    color: #000000;
+    align-items: center;
+}
+
 .about-image img {
     width: 100%;
     border-radius: 10px;
@@ -939,7 +990,7 @@ color: #006400;
 }
 
 .values {
-    padding: 80px 0;
+    padding: 10px 0;
     background-color:#000000;
 }
 
@@ -981,6 +1032,7 @@ color: #006400;
 
 .team {
     padding: 80px 0;
+    background-color:#000000;
 }
 
 .team-grid {
@@ -1051,6 +1103,15 @@ color: #006400;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Rebond simple */
+.bounce {
+    animation: bounce 2s infinite;
+}
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
 .service-info a{
     color: #006400;
 }
@@ -1086,7 +1147,7 @@ color: #006400;
     color: #000000;
 }
 
-.service-info h3:hover,h2:hover{
+.service-info h3:hover{
     color: #000000;
     align-items: center;
 }
@@ -1759,3 +1820,7 @@ color: #006400;
         gap: 30px;
     }
 }
+
+
+
+
