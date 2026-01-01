@@ -962,7 +962,7 @@ color: #006400;
     color: #000000;
 }
 
-.about-text h3:hover{
+.about-text h2:hover{
     color: #000000;
     align-items: center;
 }
@@ -1822,5 +1822,227 @@ color: #006400;
 }
 
 
+.values-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .value-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border-left: 5px solid #3498db;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+        }
+        
+        .value-card:nth-child(2) {
+            border-left-color: #e74c3c;
+        }
+        
+        .value-card:nth-child(3) {
+            border-left-color: #9b59b6;
+        }
+        
+        .value-card:nth-child(4) {
+            border-left-color: #1abc9c;
+        }
+        
+        .value-header {
+            padding: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .value-header:hover {
+            background-color: rgba(52, 152, 219, 0.05);
+        }
+        
+        .value-header-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .value-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #3498db, #2ecc71);
+            border-radius: 50%;
+            color: white;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+        
+        .value-card:nth-child(2) .value-icon {
+            background: linear-gradient(135deg, #e74c3c, #e67e22);
+        }
+        
+        .value-card:nth-child(3) .value-icon {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+        }
+        
+        .value-card:nth-child(4) .value-icon {
+            background: linear-gradient(135deg, #1abc9c, #16a085);
+        }
+        
+        .value-title-container {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .value-title {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 0;
+        }
+        
+        .value-subtitle {
+            color: #7f8c8d;
+            font-size: 0.95rem;
+            font-style: italic;
+        }
+        
+        .toggle-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3498db, #2ecc71);
+            color: white;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+        
+        .value-card:nth-child(2) .toggle-btn {
+            background: linear-gradient(135deg, #e74c3c, #e67e22);
+        }
+        
+        .value-card:nth-child(3) .toggle-btn {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+        }
+        
+        .value-card:nth-child(4) .toggle-btn {
+            background: linear-gradient(135deg, #1abc9c, #16a085);
+        }
+        
+        .toggle-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .toggle-btn.rotated {
+            transform: rotate(45deg);
+        }
+        
+        .toggle-btn.rotated:hover {
+            transform: rotate(45deg) scale(1.1);
+        }
+        
+        .value-content {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            color: #555;
+            line-height: 1.6;
+            font-size: 1.05rem;
+        }
+        
+        .value-content.open {
+            padding: 0 25px 25px;
+            max-height: 500px;
+        }
+        
+        .value-content p {
+            margin-bottom: 15px;
+        }
+        
+        .value-content p:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Animation de rebond pour la carte */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-10px);}
+            60% {transform: translateY(-5px);}
+        }
+        
+        .bounce {
+            animation: bounce 2s;
+        }
+        
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            .value-header {
+                padding: 20px;
+            }
+            
+            .value-header-left {
+                gap: 15px;
+            }
+            
+            .value-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+            
+            .value-title {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .value-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+            
+            .value-header-left {
+                width: 100%;
+            }
+            
+            .toggle-btn {
+                align-self: flex-end;
+            }
+            
+            .value-content, .value-content.open {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
 
 
+
+
+
+
+       

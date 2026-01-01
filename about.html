@@ -6,6 +6,384 @@
     <title>À propos - SamCard</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+         /* Styles pour la timeline des valeurs */
+        .valeur {
+            padding: 20px 10px;
+            background: #000000;
+        }
+
+        .container_valeur {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #006400;
+            font-size: 2.8rem;
+            margin-bottom: 60px;
+            position: relative;
+            padding-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 4px;
+            background: #006400;
+            border-radius: 2px;
+        }
+
+        /* Conteneur principal de la timeline */
+        .valeurs-timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        /* Ligne centrale verticale */
+        .valeurs-timeline::before {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background: #006400;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 3px;
+            z-index: 1;
+        }
+
+        /* Grille transformée en timeline */
+        .valeurs-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            position: relative;
+        }
+
+        /* Style des cartes en timeline */
+        .valeur-card {
+            position: relative;
+            width: calc(50% - 40px);
+            margin-bottom: 60px;
+            padding: 30px;
+            /*background-color: white;*/
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+            z-index: 2;
+
+            background: #000000;
+            /*padding: 30px; */
+            /*border-radius: 10px; */
+            border: 1px solid #006400;
+            text-align: center;
+            color: #FFFFFF;
+            /*transition: transform 0.3s ease, box-shadow 0.3s ease;*/
+        }
+
+        .valeur-card:hover {
+            position: relative;
+            width: calc(50% - 40px);
+            margin-bottom: 60px;
+            padding: 30px;
+            /*background-color: white;*/
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+            z-index: 2;
+
+            background: #FFFFFF;
+            /*padding: 30px; */
+            /*border-radius: 10px; */
+            border: 1px solid #006400;
+            text-align: center;
+            color: #000000;
+            /*transition: transform 0.3s ease, box-shadow 0.3s ease;*/
+        }
+
+        /* Animation d'apparition */
+        .valeur-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Carte positionnée à gauche */
+        .valeur-card:nth-child(odd) {
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        /* Carte positionnée à droite */
+        .valeur-card:nth-child(even) {
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        /* Points sur la ligne centrale */
+        .valeur-card::before {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background-color: #FFFFFF;
+            border: 5px solid #3498db;
+            border-radius: 50%;
+            top: 40px;
+            z-index: 3;
+            box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.8);
+        }
+
+        /* Position des points pour les cartes de gauche */
+        .valeur-card:nth-child(odd)::before {
+            right: -52px;
+        }
+
+        /* Position des points pour les cartes de droite */
+        .valeur-card:nth-child(even)::before {
+            left: -52px;
+        }
+
+        /* Couleurs différentes pour chaque point */
+        .valeur-card:nth-child(1)::before {
+            border-color: #3498db;
+            animation: pulse-blue 2s infinite;
+        }
+
+        .valeur-card:nth-child(2)::before {
+            border-color: #e74c3c;
+            animation: pulse-red 2s infinite 0.5s;
+        }
+
+        .valeur-card:nth-child(3)::before {
+            border-color: #9b59b6;
+            animation: pulse-purple 2s infinite 1s;
+        }
+
+        .valeur-card:nth-child(4)::before {
+            border-color: #1abc9c;
+            animation: pulse-green 2s infinite 1.5s;
+        }
+
+        /* Flèches pointant vers la ligne centrale */
+        .valeur-card::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            top: 40px;
+            border-style: solid;
+        }
+
+        .valeur-card:nth-child(odd)::after {
+            right: -15px;
+            border-width: 12px 0 12px 15px;
+            border-color: transparent transparent transparent #FFFFFF;
+        }
+
+        .valeur-card:nth-child(even)::after {
+            left: -15px;
+            border-width: 12px 15px 12px 0;
+            border-color: transparent #FFFFFF transparent transparent;
+        }
+
+        /* Contenu des cartes */
+        .valeur-icon {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #3498db, #2ecc71);
+            border-radius: 50%;
+            margin-bottom: 20px;
+            color: #FFFFFF;
+            font-size: 28px;
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .valeur-card:nth-child(2) .valeur-icon {
+            background: linear-gradient(135deg, #e74c3c, #e67e22);
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+        }
+
+        .valeur-card:nth-child(3) .valeur-icon {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+            box-shadow: 0 5px 15px rgba(155, 89, 182, 0.3);
+        }
+
+        .valeur-card:nth-child(4) .valeur-icon {
+            background: linear-gradient(135deg, #1abc9c, #16a085);
+            box-shadow: 0 5px 15px rgba(26, 188, 156, 0.3);
+        }
+
+        .valeur-card h3 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .valeur-card p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+        }
+
+        /* Animation de rebond */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .valeur-card.bounce {
+            animation: bounce 2s;
+        }
+
+        /* Animations de pulsation pour les points */
+        @keyframes pulse-blue {
+            0% {
+                box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(52, 152, 219, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(52, 152, 219, 0);
+            }
+        }
+
+        @keyframes pulse-red {
+            0% {
+                box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(231, 76, 60, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(231, 76, 60, 0);
+            }
+        }
+
+        @keyframes pulse-purple {
+            0% {
+                box-shadow: 0 0 0 0 rgba(155, 89, 182, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(155, 89, 182, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(155, 89, 182, 0);
+            }
+        }
+
+        @keyframes pulse-green {
+            0% {
+                box-shadow: 0 0 0 0 rgba(26, 188, 156, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(26, 188, 156, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(26, 188, 156, 0);
+            }
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 992px) {
+            .valeur-card {
+                width: calc(60% - 40px);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .valeurs-timeline::before {
+                left: 30px;
+            }
+            
+            .valeurs-grid {
+                padding-left: 60px;
+            }
+            
+            .valeur-card {
+                width: calc(100% - 40px);
+                margin-left: 0 !important;
+                margin-right: auto !important;
+            }
+            
+            .valeur-card::before {
+                left: -52px !important;
+                right: auto !important;
+            }
+            
+            .valeur-card::after {
+                left: -15px !important;
+                right: auto !important;
+                border-width: 12px 15px 12px 0 !important;
+                border-color: transparent #FFFFFF transparent transparent !important;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .valeur-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
+            }
+            
+            .valeur-card h3 {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .valeur {
+                padding: 60px 15px;
+            }
+            
+            .valeur-card {
+                padding: 20px;
+            }
+            
+            .valeurs-grid {
+                padding-left: 50px;
+            }
+            
+            .valeur-card::before {
+                left: -42px !important;
+                width: 20px;
+                height: 20px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+                margin-bottom: 40px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -46,7 +424,7 @@
             <div class="about-grid">
                 <div class="about-text bounce">
                     <h2>Notre Histoire</h2>
-                    <p>Fondée en 2018, CartesVisitePro est née d'une simple observation : les cartes de visite traditionnelles ne suffisent plus dans un monde de plus en plus numérique. Notre fondateur, un entrepreneur passionné par le design et la technologie, a imaginé une nouvelle génération de cartes de visite qui combinent l'élégance du papier avec la puissance du numérique.</p>
+                    <p>Fondée en 2022, SAM CORPORATE est née d'une simple observation : les cartes de visite traditionnelles ne suffisent plus dans un monde de plus en plus numérique. Notre fondateur, un entrepreneur passionné par le design et la technologie, a imaginé une nouvelle génération de cartes de visite qui combinent l'élégance du papier avec la puissance du numérique.</p>
                     <p>Aujourd'hui, nous sommes fiers d'accompagner plus de 500 entreprises dans leur communication professionnelle, avec des solutions innovantes qui font la différence.</p>
                 </div>
                 <div class="about-image">
@@ -74,37 +452,43 @@
     </section>
 
     <!-- Values -->
-    <section class="values">
-        <div class="container">
+    <section class="valeur">
+        <div class="container_valeur">
             <h2 class="section-title">Nos Valeurs</h2>
-            <div class="values-grid">
-                <div class="value-card bounce">
-                    <div class="value-icon">
-                        <i class="fas fa-lightbulb"></i>
+            <div class="valeurs-timeline">
+                <div class="valeurs-grid">
+                    <div class="valeur-card">
+                        <div class="valeur-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>ETHIQUE</h3>
+                        <p>Comportements éthiques dans toutes nos activités, sans compromis possible sur notre intégrité, dans le respect de nos clients et de notre équipe.</p>
+                        <p>Nous valorisons aussi l'intégrité, la transparence et le respect dans toutes nos interactions.</p>
                     </div>
-                    <h3>Innovation</h3>
-                    <p>Nous repoussons constamment les limites pour vous offrir les solutions les plus avancées.</p>
-                </div>
-                <div class="value-card bounce">
-                    <div class="value-icon">
-                        <i class="fas fa-medal"></i>
+                    <div class="valeur-card">
+                        <div class="valeur-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h3>QUALITÉ</h3>
+                        <p>Chaque carte est produite avec le plus grand soin et une attention aux détails.</p>
+                        <p>Nous nous engageons à maintenir les plus hauts standards de qualité dans toutes nos réalisations.</p>
                     </div>
-                    <h3>Qualité</h3>
-                    <p>Chaque carte est produite avec le plus grand soin et une attention aux détails.</p>
-                </div>
-                <div class="value-card bounce">
-                    <div class="value-icon">
-                        <i class="fas fa-users"></i>
+                    <div class="valeur-card">
+                        <div class="valeur-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>COLLABORATION</h3>
+                        <p>Nous travaillons main dans la main avec nos clients pour des résultats parfaits.</p>
+                        <p>Notre approche collaborative nous permet de comprendre et répondre précisément à vos besoins.</p>
                     </div>
-                    <h3>Collaboration</h3>
-                    <p>Nous travaillons main dans la main avec nos clients pour des résultats parfaits.</p>
-                </div>
-                <div class="value-card bounce">
-                    <div class="value-icon">
-                        <i class="fas fa-leaf"></i>
+                    <div class="valeur-card">
+                        <div class="valeur-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>ÉCO-RESPONSABILITÉ</h3>
+                        <p>Nous utilisons des matériaux durables et des processus respectueux de l'environnement.</p>
+                        <p>Notre engagement écologique guide chacune de nos décisions et actions quotidiennes.</p>
                     </div>
-                    <h3>Éco-responsabilité</h3>
-                    <p>Nous utilisons des matériaux durables et des processus respectueux de l'environnement.</p>
                 </div>
             </div>
         </div>
@@ -190,6 +574,38 @@
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <script>
+
+        // Animation au défilement pour la timeline
+document.addEventListener('DOMContentLoaded', function() {
+    const valeurCards = document.querySelectorAll('.valeur-card');
+    
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.85
+        );
+    }
+    
+    function handleScroll() {
+        valeurCards.forEach(card => {
+            if (isElementInViewport(card)) {
+                card.classList.add('visible');
+            }
+        });
+    }
+    
+    // Initialisation
+    valeurCards[0].classList.add('visible');
+    
+    // Écouteurs d'événements
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleScroll);
+    
+    // Vérification initiale
+    setTimeout(handleScroll, 300);
+});
+
+    </script>
 </body>
 </html>

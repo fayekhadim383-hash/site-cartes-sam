@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // FAQ Accordion
     initFAQAccordion();
+   
 });
 
 // ===== MOBILE NAVIGATION =====
