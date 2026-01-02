@@ -264,7 +264,7 @@ a:hover {
 }
 
 /* === SERVICES PREVIEW - NOS CARTES === */
-.services-preview-card {
+/*.services-preview-card {
     padding: 10px 0;
     background-color: #000000;
 }
@@ -338,7 +338,7 @@ a:hover {
     font-size: 3rem;
     color: #3498db;
     margin-bottom: 20px;
-}
+}*/
 
 /* ===== TEMOIGNAGES ===== */
 .services-preview {
@@ -1044,6 +1044,7 @@ color: #006400;
 .team-member {
     text-align: center;
     background: #000000;
+    color: #FFFFFF;
     padding: 30px;
     border-radius: 10px;
     border: 1px solid #006400;
@@ -1062,7 +1063,14 @@ color: #006400;
 
 .team-member:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background: #FFFFFF;
+    color: #000000;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #006400;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .team-member h3 {
@@ -1099,7 +1107,7 @@ color: #006400;
     border-radius: 10px;
     border: 1px solid #006400;
     text-align: center;
-    color: #eee;
+    color: #FFFFFF;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -1113,7 +1121,7 @@ color: #006400;
 }
 
 .service-info a{
-    color: #006400;
+    color: #FFFFFF;
 }
 
 .service-info h3,h2{

@@ -8,7 +8,410 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <style>
+        .tech-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+            background: #000000;
+        }
+        
+        .header-title {
+            font-size: 3.2rem;
+            background: #006400;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 15px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+        
+        .header-subtitle {
+            font-size: 1.2rem;
+            color: #FFFFFF;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .tech-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+        
+        .tab {
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #006400;
+            color: #FFFFFF;
+            box-shadow: 0 4px 6px #006400;
+        }
+        
+        .tab:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px #006400;
+            background: #FFFFFF;
+            color: #006400;
+        }
+        
+        .tab.active {
+            background: #FFFFFF;
+            color: #006400;
+            box-shadow: 0 5px 8px #006400;
+        }
+        
+        .tab.qr-tab.active {
+            background: #006400;
+            box-shadow: 0 5px 8x #006400;
+        }
+        
+        .tab-icon {
+            font-size: 1.4rem;
+        }
+        
+        .tech-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .tech-content.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .tech-visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .visual-main {
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px #000000;
+        }
+        
+        .qr-visual {
+            background: #006400;
+        }
+        
+        .nfc-visual {
+            background: #006400;
+        }
+        
+        .visual-icon {
+            font-size: 8rem;
+            color: #FFFFFF;
+        }
+        
+        .visual-particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #FFFFFF;
+        }
+        
+        .info-flow {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .flow-step {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            padding: 25px;
+            background: #000000;
+            color: #FFFFFF;
+            border-radius: 16px;
+            border-left: 5px solid;
+            transition: all 0.3s ease;
+        }
+        
+        .flow-step:hover {
+            transform: translateX(10px);
+            background: #FFFFFF;
+            color: #000000;
+        }
 
+        .flow-step p:hover {
+            color: #000000;
+        }
+        
+        .qr-step {
+            border-left-color: #006400;
+        }
+        
+        .nfc-step {
+            border-left-color: #006400;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+        
+        .qr-step .step-number {
+            background: #006400;
+            color: #FFFFFF
+        }
+        
+        .nfc-step .step-number {
+            background: #006400;
+            color: #FFFFFF
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+
+        .step-content:hover {
+            color: #000000;
+            background: #FFFFFF;
+        }
+        
+        .step-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .step-desc {
+            color: #FFFFFF;
+            line-height: 1.6;
+        }
+        
+        .keywords-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 50px;
+            padding: 30px;
+            background: #000000;
+            border-radius: 16px;
+        }
+        
+        .keyword {
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .keyword:hover {
+            transform: scale(1.05);
+        }
+        
+        .qr-keyword {
+            color: #FFFFFF;
+            border: 1px solid #006400;
+        }
+        
+        .nfc-keyword {
+            color: #FFFFFF;
+            border: 1px solid #006400;
+        }
+        
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 60px;
+        }
+        
+        .action-btn {
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .action-btn:hover {
+            transform: translateY(-5px);
+        }
+        
+        .btn-qr {
+            background: #006400;
+            color: #FFFFFF;
+            box-shadow: 0 10px 20px #006400;
+        }
+        
+        .btn-nfc {
+            background: #006400;
+            color: #FFFFFF;
+            box-shadow: 0 10px 20px #006400;
+        }
+        
+        .comparison-table {
+            background: #000000;
+            border-radius: 16px;
+            padding: 30px;
+            margin-top: 60px;
+            display: none;
+        }
+        
+        .comparison-table.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .table-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: #FFFFFF;
+        }
+        
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 1fr 2fr 2fr;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+        }
+        
+        .comparison-row:last-child {
+            border-bottom: none;
+        }
+        
+        .row-title {
+            font-weight: 700;
+            color: #FFFFFF;
+        }
+        
+        .qr-cell, .nfc-cell {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+        
+        .qr-cell {
+            background: #006400;
+            color: #FFFFFF;
+        }
+        
+        .nfc-cell {
+            background: #FFFFFF;
+            color: #006400;
+        }
+        
+        .cell-icon {
+            font-size: 1.5rem;
+        }
+        
+        .qr-cell .cell-icon {
+            color: #FFFFFF;
+        }
+        
+        .nfc-cell .cell-icon {
+            color: #006400;
+        }
+        
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 2.5rem;
+            }
+            
+            .tech-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .tab {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+            
+            .visual-main {
+                width: 250px;
+                height: 250px;
+            }
+            
+            .visual-icon {
+                font-size: 6rem;
+            }
+            
+            .flow-step {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .comparison-row {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .action-btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -107,18 +510,209 @@
 
     <!-- Section comment ça marchent -->
     <section class="services-preview-card">
-        <div class="container">
-            <h2 class="section-title">Comment ça marche ?</h2>
-            <div class="services-grid-card">
-                <div class="service-card-card bounce">
-                    <h3><i class="fas fa-qrcode"></i> Cartes QR Code </h3>
-                    <p>Les cartes QR code fonctionnent en encodant des informations (lien web, données de paiement, contact) dans un motif carré noir et blanc, scannable par l'appareil photo d'un smartphone, qui redirige ensuite l'utilisateur vers le contenu numérique associé (menu, page de paiement sécurisée, profil social, etc.) une fois le code décodé, permettant une action rapide et sans saisie manuelle. C'est une passerelle numérique simple et rapide entre le monde physique (la carte) et le digital.</p>
-                    <a href="services.html#standard" class="btn-link">En savoir plus →</a>
+        <div class="tech-container">
+            <div class="header">
+                <h1 class="header-title">Technologies Connectées</h1>
+                <p class="header-subtitle">Découvrez comment les QR Codes et la technologie NFC transforment vos interactions physiques en expériences numériques instantanées</p>
+            </div>
+            
+            <div class="tech-tabs">
+                <button class="tab active" data-tech="qr">
+                    <i class="fas fa-qrcode tab-icon"></i>
+                    QR Code
+                </button>
+                <button class="tab" data-tech="nfc">
+                    <i class="fas fa-wifi tab-icon"></i>
+                    Technologie NFC
+                </button>
+                <button class="tab" data-tech="comparison">
+                    <i class="fas fa-balance-scale tab-icon"></i>
+                    Comparaison
+                </button>
+            </div>
+            
+            <!-- Contenu QR Code -->
+            <div class="tech-content active" id="qr-content">
+                <div class="tech-visual">
+                    <div class="visual-main qr-visual">
+                        <i class="fas fa-qrcode visual-icon"></i>
+                        <div class="visual-particles" id="qr-particles"></div>
+                    </div>
                 </div>
-                <div class="service-card-card bounce">
-                        <h3><i class="fas fa-wifi"></i> Cartes NFC</h3>
-                    <p>Les cartes NFC fonctionnent grâce à une puce et une antenne qui échangent des données sans contact via des ondes radio à très courte portée (moins de 10 cm) avec un appareil actif (comme un smartphone ou un terminal de paiement) qui leur fournit l'énergie nécessaire, permettant des paiements sans contact, des transferts d'informations (coordonnées, liens) ou des accès sécurisés, le tout instantanément et automatiquement.</p>
-                    <a href="services.html#nfc" class="btn-link">En savoir plus →</a>
+                
+                <div class="info-flow">
+                    <div class="flow-step qr-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3 class="step-title"><i class="fas fa-code"></i> Encodage Visuel</h3>
+                            <p class="step-desc">Les données (liens, contacts, paiements) sont transformées en un motif carré noir et blanc, lisible par les appareils mobiles.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flow-step qr-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3 class="step-title"><i class="fas fa-camera"></i> Capture & Lecture</h3>
+                            <p class="step-desc">L'appareil photo du smartphone scanne le code qui est instantanément décodé par une application dédiée.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flow-step qr-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3 class="step-title"><i class="fas fa-bolt"></i> Action Immédiate</h3>
+                            <p class="step-desc">Redirection automatique vers le contenu numérique : site web, menu, profil ou page de paiement sécurisée.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="keywords-cloud">
+                    <div class="keyword qr-keyword"><i class="fas fa-link"></i> Liens Web</div>
+                    <div class="keyword qr-keyword"><i class="fas fa-shopping-cart"></i> E-commerce</div>
+                    <div class="keyword qr-keyword"><i class="fas fa-address-book"></i> Cartes de Visite</div>
+                    <div class="keyword qr-keyword"><i class="fas fa-utensils"></i> Menus Restaurants</div>
+                    <div class="keyword qr-keyword"><i class="fas fa-ticket-alt"></i> Billets Électroniques</div>
+                    <div class="keyword qr-keyword"><i class="fas fa-wifi"></i> Connexion Wi-Fi</div>
+                    <div class="keyword qr-keyword"><i class="fas fa-share-alt"></i> Partage Rapide</div>
+                    <div class="keyword qr-keyword"><i class="fas fa-mobile-alt"></i> Applications Mobile</div>
+                </div>
+                
+                <div class="action-buttons">
+                    <a href="services.html#standard" class="action-btn btn-qr">
+                        <i class="fas fa-info-circle"></i>
+                        En savoir plus sur les QR Codes
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Contenu NFC -->
+            <div class="tech-content" id="nfc-content">
+                <div class="tech-visual">
+                    <div class="visual-main nfc-visual">
+                        <i class="fas fa-wifi visual-icon"></i>
+                        <div class="visual-particles" id="nfc-particles"></div>
+                    </div>
+                </div>
+                
+                <div class="info-flow">
+                    <div class="flow-step nfc-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3 class="step-title"><i class="fas fa-microchip"></i> Technologie Embarquée</h3>
+                            <p class="step-desc">La carte intègre une puce électronique et une antenne permettant l'échange de données sans contact.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flow-step nfc-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3 class="step-title"><i class="fas fa-exchange-alt"></i> Communication sans Contact</h3>
+                            <p class="step-desc">Échange de données via ondes radio à très courte portée (moins de 10 cm) avec un appareil compatible.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flow-step nfc-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3 class="step-title"><i class="fas fa-user-check"></i> Action Sécurisée & Automatique</h3>
+                            <p class="step-desc">Authentification, paiement ou transfert d'informations déclenché automatiquement par simple approche.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="keywords-cloud">
+                    <div class="keyword nfc-keyword"><i class="fas fa-credit-card"></i> Paiement Sans Contact</div>
+                    <div class="keyword nfc-keyword"><i class="fas fa-key"></i> Contrôle d'Accès</div>
+                    <div class="keyword nfc-keyword"><i class="fas fa-id-card"></i> Badges Professionnels</div>
+                    <div class="keyword nfc-keyword"><i class="fas fa-bus"></i> Titres de Transport</div>
+                    <div class="keyword nfc-keyword"><i class="fas fa-gamepad"></i> Gaming & Jouets</div>
+                    <div class="keyword nfc-keyword"><i class="fas fa-home"></i> Domotique</div>
+                    <div class="keyword nfc-keyword"><i class="fas fa-shield-alt"></i> Sécurité Renforcée</div>
+                    <div class="keyword nfc-keyword"><i class="fas fa-industry"></i> Industrie 4.0</div>
+                </div>
+                
+                <div class="action-buttons">
+                    <a href="services.html#nfc" class="action-btn btn-nfc">
+                        <i class="fas fa-info-circle"></i>
+                        En savoir plus sur la technologie NFC
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Comparaison -->
+            <div class="comparison-table" id="comparison-content">
+                <h3 class="table-title">Comparaison des Technologies</h3>
+                
+                <div class="comparison-row">
+                    <div class="row-title">Principe</div>
+                    <div class="qr-cell">
+                        <i class="fas fa-eye cell-icon"></i>
+                        <span>Communication visuelle</span>
+                    </div>
+                    <div class="nfc-cell">
+                        <i class="fas fa-broadcast-tower cell-icon"></i>
+                        <span>Communication radio</span>
+                    </div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="row-title">Portée</div>
+                    <div class="qr-cell">
+                        <i class="fas fa-ruler cell-icon"></i>
+                        <span>Plusieurs mètres (selon la taille)</span>
+                    </div>
+                    <div class="nfc-cell">
+                        <i class="fas fa-ruler-vertical cell-icon"></i>
+                        <span>Moins de 10 cm (très courte)</span>
+                    </div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="row-title">Interaction</div>
+                    <div class="qr-cell">
+                        <i class="fas fa-camera cell-icon"></i>
+                        <span>Scan actif avec caméra</span>
+                    </div>
+                    <div class="nfc-cell">
+                        <i class="fas fa-hand-point-up cell-icon"></i>
+                        <span>Approche passive</span>
+                    </div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="row-title">Vitesse</div>
+                    <div class="qr-cell">
+                        <i class="fas fa-stopwatch cell-icon"></i>
+                        <span>Rapide (1-2 secondes)</span>
+                    </div>
+                    <div class="nfc-cell">
+                        <i class="fas fa-bolt cell-icon"></i>
+                        <span>Instantanée (&lt; 0.1 seconde)</span>
+                    </div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="row-title">Sécurité</div>
+                    <div class="qr-cell">
+                        <i class="fas fa-lock cell-icon"></i>
+                        <span>Standard (peut être chiffré)</span>
+                    </div>
+                    <div class="nfc-cell">
+                        <i class="fas fa-lock cell-icon"></i>
+                        <span>Élevée (cryptographie embarquée)</span>
+                    </div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="row-title">Coût</div>
+                    <div class="qr-cell">
+                        <i class="fas fa-euro-sign cell-icon"></i>
+                        <span>Très économique à produire</span>
+                    </div>
+                    <div class="nfc-cell">
+                        <i class="fas fa-euro-sign cell-icon"></i>
+                        <span>Modéré (puce électronique)</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -305,7 +899,133 @@
             </div>
         </div>
     </footer>
-
     <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gestion des onglets
+            const tabs = document.querySelectorAll('.tab');
+            const contents = document.querySelectorAll('.tech-content, .comparison-table');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const tech = this.dataset.tech;
+                    
+                    // Mettre à jour les onglets actifs
+                    tabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Afficher le contenu correspondant
+                    contents.forEach(content => {
+                        content.classList.remove('active');
+                    });
+                    
+                    if (tech === 'comparison') {
+                        document.getElementById('comparison-content').classList.add('active');
+                    } else {
+                        document.getElementById(`${tech}-content`).classList.add('active');
+                    }
+                });
+            });
+            
+            // Création des particules animées
+            function createParticles(containerId, count, color) {
+                const container = document.getElementById(containerId);
+                if (!container) return;
+                
+                for (let i = 0; i < count; i++) {
+                    const particle = document.createElement('div');
+                    particle.classList.add('particle');
+                    particle.style.left = `${Math.random() * 100}%`;
+                    particle.style.top = `${Math.random() * 100}%`;
+                    particle.style.background = color;
+                    particle.style.animation = `moveParticle ${3 + Math.random() * 5}s infinite alternate`;
+                    
+                    container.appendChild(particle);
+                    
+                    // Animation CSS pour les particules
+                    const style = document.createElement('style');
+                    style.textContent = `
+                        @keyframes moveParticle {
+                            0% { transform: translate(0, 0); opacity: 0.3; }
+                            100% { transform: translate(${Math.random() * 40 - 20}px, ${Math.random() * 40 - 20}px); opacity: 0.8; }
+                        }
+                    `;
+                    document.head.appendChild(style);
+                }
+            }
+            
+            // Créer les particules pour chaque technologie
+            createParticles('qr-particles', 15, 'rgba(255, 255, 255, 0.7)');
+            createParticles('nfc-particles', 15, 'rgba(255, 255, 255, 0.7)');
+            
+            // Animation des étapes au défilement
+            const observerOptions = {
+                threshold: 0.2,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateX(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observer les étapes de chaque technologie
+            const steps = document.querySelectorAll('.flow-step');
+            steps.forEach(step => {
+                step.style.opacity = '0';
+                step.style.transform = 'translateX(-30px)';
+                step.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(step);
+            });
+            
+            // Animation des mots-clés
+            const keywords = document.querySelectorAll('.keyword');
+            keywords.forEach(keyword => {
+                keyword.style.opacity = '0';
+                keyword.style.transform = 'scale(0.8)';
+                keyword.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            });
+            
+            // Animer les mots-clés quand leur section est active
+            function animateKeywords() {
+                const activeContent = document.querySelector('.tech-content.active, .comparison-table.active');
+                if (activeContent) {
+                    const activeKeywords = activeContent.querySelectorAll('.keyword');
+                    activeKeywords.forEach((keyword, index) => {
+                        setTimeout(() => {
+                            keyword.style.opacity = '1';
+                            keyword.style.transform = 'scale(1)';
+                        }, index * 100);
+                    });
+                }
+            }
+            
+            // Animer les mots-clés au changement d'onglet
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    setTimeout(animateKeywords, 300);
+                });
+            });
+            
+            // Animer initialement
+            setTimeout(animateKeywords, 500);
+            
+            // Effet de survol pour les cellules de comparaison
+            const comparisonCells = document.querySelectorAll('.qr-cell, .nfc-cell');
+            comparisonCells.forEach(cell => {
+                cell.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.05)';
+                });
+                
+                cell.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
