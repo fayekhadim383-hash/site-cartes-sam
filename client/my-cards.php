@@ -33,7 +33,7 @@ foreach ($cards as $card) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes Cartes - CartesVisitePro</title>
+    <title>Mes Cartes - SamCard</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/client.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -45,7 +45,7 @@ foreach ($cards as $card) {
         <div class="sidebar-header">
             <a href="../index.html" class="logo">
                 <img src="../assets/images/logo.png" alt="CartesVisitePro">
-                <span>CartesVisitePro</span>
+                <span>SamCard</span>
             </a>
         </div>
         
@@ -62,7 +62,6 @@ foreach ($cards as $card) {
                 <li><a href="dashboard.php"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a></li>
                 <li class="active"><a href="my-cards.php"><i class="fas fa-id-card"></i> Mes cartes</a></li>
                 <li><a href="update-card.php"><i class="fas fa-edit"></i> Mettre à jour</a></li>
-                <li><a href="upgrade-card.php"><i class="fas fa-level-up-alt"></i> Mettre à niveau</a></li>
                 <li><a href="demo.php"><i class="fas fa-play-circle"></i> Démonstration</a></li>
                 <li><a href="profile.php"><i class="fas fa-user-cog"></i> Mon profil</a></li>
             </ul>
@@ -80,11 +79,6 @@ foreach ($cards as $card) {
                 <h1>Mes Cartes de Visite</h1>
                 <p>Gérez toutes vos cartes à un seul endroit</p>
             </div>
-            <div class="header-right">
-                <a href="?new=true" class="btn btn-primary">
-                    <i class="fas fa-plus"></i> Nouvelle Carte
-                </a>
-            </div>
         </header>
 
         <!-- Stats Overview -->
@@ -101,7 +95,7 @@ foreach ($cards as $card) {
             <div class="stat-overview-card">
                 <div class="stat-content">
                     <h3><?php echo $card_types['standard']; ?></h3>
-                    <p>Cartes Standard</p>
+                    <p>Cartes Qr Code</p>
                 </div>
                 <div class="stat-icon">
                     <i class="fas fa-id-card"></i>
@@ -116,15 +110,6 @@ foreach ($cards as $card) {
                     <i class="fas fa-wifi"></i>
                 </div>
             </div>
-            <div class="stat-overview-card">
-                <div class="stat-content">
-                    <h3><?php echo $card_types['premium']; ?></h3>
-                    <p>Cartes Premium</p>
-                </div>
-                <div class="stat-icon">
-                    <i class="fas fa-crown"></i>
-                </div>
-            </div>
         </div>
 
         <!-- Cards Table -->
@@ -134,7 +119,6 @@ foreach ($cards as $card) {
                 <div class="table-actions">
                     <button class="btn-filter active">Toutes</button>
                     <button class="btn-filter">Actives</button>
-                    <button class="btn-filter">En attente</button>
                     <button class="btn-filter">Expirées</button>
                 </div>
             </div>

@@ -137,7 +137,7 @@ $upgrade_requests = $stmt->fetchColumn();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Profil - CartesVisitePro</title>
+    <title>Mon Profil - SamCard</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/client.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -147,8 +147,8 @@ $upgrade_requests = $stmt->fetchColumn();
     <div class="sidebar">
         <div class="sidebar-header">
             <a href="../index.html" class="logo">
-                <img src="../assets/images/logo.png" alt="CartesVisitePro">
-                <span>CartesVisitePro</span>
+                <img src="../assets/images/logo.png" alt="SamCard">
+                <span>SamCard</span>
             </a>
         </div>
         
@@ -165,7 +165,6 @@ $upgrade_requests = $stmt->fetchColumn();
                 <li><a href="dashboard.php"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a></li>
                 <li><a href="my-cards.php"><i class="fas fa-id-card"></i> Mes cartes</a></li>
                 <li><a href="update-card.php"><i class="fas fa-edit"></i> Mettre à jour</a></li>
-                <li><a href="upgrade-card.php"><i class="fas fa-level-up-alt"></i> Mettre à niveau</a></li>
                 <li><a href="demo.php"><i class="fas fa-play-circle"></i> Démonstration</a></li>
                 <li class="active"><a href="profile.php"><i class="fas fa-user-cog"></i> Mon profil</a></li>
             </ul>
@@ -224,15 +223,6 @@ $upgrade_requests = $stmt->fetchColumn();
                         <div class="stat-content">
                             <h3><?php echo $total_demos; ?></h3>
                             <p>Démonstrations</p>
-                        </div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-level-up-alt"></i>
-                        </div>
-                        <div class="stat-content">
-                            <h3><?php echo $upgrade_requests; ?></h3>
-                            <p>Mises à niveau</p>
                         </div>
                     </div>
                 </div>
@@ -426,34 +416,6 @@ $upgrade_requests = $stmt->fetchColumn();
                                     <input type="checkbox" name="notif_newsletter" checked>
                                     <span>Newsletter mensuelle</span>
                                 </label>
-                            </div>
-                        </div>
-                        
-                        <div class="preference-group">
-                            <h3>Affichage</h3>
-                            <div class="preference-option">
-                                <label for="theme">Thème</label>
-                                <select id="theme" name="theme">
-                                    <option value="light">Clair</option>
-                                    <option value="dark">Sombre</option>
-                                    <option value="auto">Auto (selon l'appareil)</option>
-                                </select>
-                            </div>
-                            <div class="preference-option">
-                                <label for="language">Langue</label>
-                                <select id="language" name="language">
-                                    <option value="fr">Français</option>
-                                    <option value="en">English</option>
-                                    <option value="es">Español</option>
-                                </select>
-                            </div>
-                            <div class="preference-option">
-                                <label for="timezone">Fuseau horaire</label>
-                                <select id="timezone" name="timezone">
-                                    <option value="Europe/Paris">Europe/Paris (GMT+1)</option>
-                                    <option value="UTC">UTC</option>
-                                    <option value="America/New_York">America/New_York (GMT-5)</option>
-                                </select>
                             </div>
                         </div>
                         

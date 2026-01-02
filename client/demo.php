@@ -96,7 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['simulate_nfc'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Démonstration - CartesVisitePro</title>
+    <title>Démonstration - SamCard</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/client.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -107,8 +107,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['simulate_nfc'])) {
     <div class="sidebar">
         <div class="sidebar-header">
             <a href="../index.html" class="logo">
-                <img src="../assets/images/logo.png" alt="CartesVisitePro">
-                <span>CartesVisitePro</span>
+                <img src="../assets/images/logo.png" alt="SamCard">
+                <span>SamCard</span>
             </a>
         </div>
         
@@ -125,7 +125,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['simulate_nfc'])) {
                 <li><a href="dashboard.php"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a></li>
                 <li><a href="my-cards.php"><i class="fas fa-id-card"></i> Mes cartes</a></li>
                 <li><a href="update-card.php"><i class="fas fa-edit"></i> Mettre à jour</a></li>
-                <li><a href="upgrade-card.php"><i class="fas fa-level-up-alt"></i> Mettre à niveau</a></li>
                 <li class="active"><a href="demo.php"><i class="fas fa-play-circle"></i> Démonstration</a></li>
                 <li><a href="profile.php"><i class="fas fa-user-cog"></i> Mon profil</a></li>
             </ul>

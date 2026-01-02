@@ -52,7 +52,7 @@ $pending_upgrades = $stmt->fetchColumn();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tableau de bord - CartesVisitePro</title>
+    <title>Tableau de bord - SamCard</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/client.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -63,7 +63,7 @@ $pending_upgrades = $stmt->fetchColumn();
         <div class="sidebar-header">
             <a href="../index.html" class="logo">
                 <img src="../assets/images/logo.png" alt="CartesVisitePro">
-                <span>CartesVisitePro</span>
+                <span>SamCard</span>
             </a>
         </div>
         
@@ -80,7 +80,6 @@ $pending_upgrades = $stmt->fetchColumn();
                 <li class="active"><a href="dashboard.php"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a></li>
                 <li><a href="my-cards.php"><i class="fas fa-id-card"></i> Mes cartes</a></li>
                 <li><a href="update-card.php"><i class="fas fa-edit"></i> Mettre à jour</a></li>
-                <li><a href="upgrade-card.php"><i class="fas fa-level-up-alt"></i> Mettre à niveau</a></li>
                 <li><a href="demo.php"><i class="fas fa-play-circle"></i> Démonstration</a></li>
                 <li><a href="profile.php"><i class="fas fa-user-cog"></i> Mon profil</a></li>
             </ul>
@@ -162,17 +161,9 @@ $pending_upgrades = $stmt->fetchColumn();
                     <i class="fas fa-edit"></i>
                     <span>Mettre à jour une carte</span>
                 </a>
-                <a href="upgrade-card.php" class="action-btn">
-                    <i class="fas fa-level-up-alt"></i>
-                    <span>Mettre à niveau</span>
-                </a>
                 <a href="demo.php" class="action-btn">
                     <i class="fas fa-play-circle"></i>
                     <span>Voir démo</span>
-                </a>
-                <a href="my-cards.php?new=true" class="action-btn">
-                    <i class="fas fa-plus-circle"></i>
-                    <span>Nouvelle carte</span>
                 </a>
             </div>
         </div>
@@ -237,15 +228,6 @@ $pending_upgrades = $stmt->fetchColumn();
                     <div class="activity-content">
                         <p>Vous vous êtes connecté à votre compte</p>
                         <span class="activity-time">Il y a 5 minutes</span>
-                    </div>
-                </div>
-                <div class="activity-item">
-                    <div class="activity-icon">
-                        <i class="fas fa-credit-card"></i>
-                    </div>
-                    <div class="activity-content">
-                        <p>Nouvelle commande de carte NFC</p>
-                        <span class="activity-time">Hier à 14:30</span>
                     </div>
                 </div>
                 <div class="activity-item">
