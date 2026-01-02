@@ -1120,6 +1120,10 @@ color: #006400;
     50% { transform: translateY(-10px); }
 }
 
+.service-info .btn-link-card{
+    color: #006400;
+}
+
 .service-info a{
     color: #FFFFFF;
 }
